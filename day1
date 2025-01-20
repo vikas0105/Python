@@ -1,0 +1,37 @@
+Enter ipython3 environment 
+
+for interger we can enter 
+  1+3
+  1+4 etc etc
+
+for string 
+  username="vikas"
+  Password="test"
+===========================================================================================================================================================================
+Print statements:
+
+  examples Australia=aussie
+           Newzealand=kiwis
+           South-Africa=chockers
+  
+Print by dot method : print("Hello here are some nicknames of cricket teams Australia={}.NZ={}.RSA={}.".format(Australia,Newzealand,South-Africa))
+print by f method : Print(f"hello here are nicknames of {Australia}.{Newzealand}.{South-Africa}")
+
+  example username=vikas
+          password=Admin
+          Department=IT
+
+print("hello here are the details of myuser{}.mypass{}.mydept{}.".format(username,password,Department))
+print(f "hello here are the details of user{username}.credentials{password}.team{department}")
+
+=============================================================================================================================================================================
+
+Prompts
+
+  example : username=input("whats the username\n")
+            password=input("whats the password\n")
+            department=input("whats the department\n")
+
+==============================================================================================================================================================================
+
+  

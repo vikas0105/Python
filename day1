@@ -54,4 +54,17 @@ In [12]: print(name[2])
 k
 
 In [13]: print(name[4])
+
+reverse indexing:
+
+In [1]: name="vikas"
+
+In [2]: print(name[-1])
+s
+
+In [3]: print(name[-2])
+a
+
+In [4]: print(name[-3])
+k
   

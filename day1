@@ -36,6 +36,8 @@ Prompts
             password=input("whats the password\n")
             department=input("whats the department\n")
 
+this can be executed from scripts.
+
 ==============================================================================================================================================================================
 
   

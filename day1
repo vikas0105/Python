@@ -39,5 +39,19 @@ Prompts
 this can be executed from scripts.
 
 ==============================================================================================================================================================================
+Indexing :
 
+Example : Lets assign a value to variable and index its elements.
+
+name="vikas"
+
+In [10]: name="vikas"
+
+In [11]: print(name[3])
+a
+
+In [12]: print(name[2])
+k
+
+In [13]: print(name[4])
   

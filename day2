@@ -1,1 +1,91 @@
+list: it is a group of elements. It contains multiple values with different types or same type. 
+list is created using a pair of square brackets. Using index, elements of list can be accessed. 
+
+Example : 
+
+In [1]: integer=[]
+
+In [2]: print(integer)
+[]
+
+In [3]: integer1=[1,2,3,4,5,6]
+
+In [4]: print(integer1)
+[1, 2, 3, 4, 5, 6]
+
+In [5]: string=["vikas","pooja","gamya"]
+
+In [6]: print(string)
+['vikas', 'pooja', 'gamya']
+
+In [7]: combination=[1,"vikas",2,"pooja",3,"gamya"]
+
+In [8]: print(combination)
+[1, 'vikas', 2, 'pooja', 3, 'gamya']
+
+************************************************************************************************************************
+Append : is used to add the elements into list
+
+In [7]: combination=[1,"vikas",2,"pooja",3,"gamya"]
+
+In [8]: print(combination)
+[1, 'vikas', 2, 'pooja', 3, 'gamya']
+
+In [9]: combination.append("palmsprings")
+
+In [10]: combination.append("H-63")
+
+In [11]: print(combination)
+[1, 'vikas', 2, 'pooja', 3, 'gamya', 'palmsprings', 'H-63']
+--------------------------------------------------------------------------------------------------------------------------
+
+pop : remove the element from the list based on indexing.
+
+In [11]: print(combination)
+[1, 'vikas', 2, 'pooja', 3, 'gamya', 'palmsprings', 'H-63']
+
+In [12]: combination.pop(6)
+Out[12]: 'palmsprings'
+
+In [13]: print(combination)
+[1, 'vikas', 2, 'pooja', 3, 'gamya', 'H-63']
+
+In [15]: combination.pop(6)
+Out[15]: 'H-63'
+
+----------------------------------------------------------------------------------------------------------------------------
+Insert: Insert is a method used to add the element for a specific position for the list 
+
+In [16]: combination.insert(6, "palmsprings")
+
+In [17]: print(combination)
+[1, 'vikas', 2, 'pooja', 3, 'gamya', 'palmsprings']
+
+In [18]: combination.insert(7, "H-63")
+
+In [19]: print(combination)
+[1, 'vikas', 2, 'pooja', 3, 'gamya', 'palmsprings', 'H-63']
+---------------------------------------------------------------------------------------------------------------------------
+Extend : It is used to add one list to the another list 
+
+a = [1, 2, 3]
+b = [4, 5]
+
+# Using extend() to add elements of b to a
+a.extend(b)
+
+print(a)
+[1, 2, 3, 4, 5]
+============================================================================================================================
+
+
+Dictionary's
+
+
+
+
+
+
+
+
 

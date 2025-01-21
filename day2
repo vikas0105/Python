@@ -79,6 +79,24 @@ print(a)
 ============================================================================================================================
 Dictionary's
 
+Dictionary: Dictionary is key value pairs. 
+it is created using {} brackets (pair of curly braces). Using key, values of the dictionary can be accessed.
+
+In [38]: dict1={"dad":"vikas","mom":"pooja","kid":"gamya"}
+
+In [39]: print(dict1)
+{'dad': 'vikas', 'mom': 'pooja', 'kid': 'gamya'}
+
+In [41]: print(dict1["dad"])
+vikas
+
+In [42]: print(dict1["mom"])
+pooja
+
+In [43]: print(dict1["kid"])
+gamya
+
+
 
 
 

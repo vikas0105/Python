@@ -1,1 +1,62 @@
+Basic Counting with while
 
+count = 1
+
+while count <= 5:  # Loop until count is less than or equal to 5
+    print(f"Count is: {count}")
+    count += 1  # Increment the count
+=================================================================================================================================
+Sum of Numbers
+
+n = int(input("Enter a number: "))
+total = 0
+count = 1
+
+while count <= n:
+    total += count  # Add current to the total
+    count += 1  # Move to the next number
+
+print(f"Sum of numbers from 1 to {n} is: {total}")
+=================================================================================================================================
+Reverse a Number
+
+number = int(input("Enter a number: "))
+reverse = 0
+
+while number > 0:
+    digit = number % 10  # Get the last digit
+    reverse = reverse * 10 + digit  # Build the reversed number
+    number //= 10  # Remove the last digit from the number
+
+print(f"Reversed number: {reverse}")
+==============================================================================================================================
+
+n = int(input("Enter a number: "))
+total = sum(range(1, n + 1))  # Generate a range from 1 to n and calculate the sum
+print(f"Sum of numbers from 1 to {n} is: {total}")
+
+=============================================================================================================================
+
+product of n numbers 
+
+n = int(input("Enter a number: "))
+product = 1  # Start with 1 as the identity for multiplication
+
+for i in range(1, n + 1):  # Loop through numbers from 1 to n
+    product *= i  # Multiply the current number to the product
+
+print(f"Product of numbers from 1 to {n} is: {product}")
+
+============================================================================================================================
+Reverse a Number
+
+number = int(input("Enter a number: "))
+reverse = 0
+
+while number > 0:
+    digit = number % 10  # Get the last digit
+    reverse = reverse * 10 + digit  # Build the reversed number
+    number //= 10  # Remove the last digit from the number
+
+print(f"Reversed number: {reverse}")
+==============================================================================================================================

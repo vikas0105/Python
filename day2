@@ -79,6 +79,37 @@ print(a)
 
 A-P-I-E
 ============================================================================================================================
+
+mylist1 = [1, 2, 3, 4,]
+
+mylist2 = ["one", "two", "three", "four"]
+
+mylist3 = [5, 6, 7, 8]
+
+mylist4 = ["five", "six", "seven", "eight"]
+
+print(mylist1)
+print(mylist2)
+print(mylist1[0])
+print(mylist1[1])
+print(mylist1[2])
+mylist1.append(9)
+print(mylist1)
+mylist2.append("nine")
+print(mylist2)
+mylist1.pop(4)
+print(mylist1)
+mylist2.pop(4)
+print(mylist2)
+mylist1.insert(3, 9)
+print(mylist1)
+mylist2.insert(3, "nine")
+print(mylist2)
+mylist1.extend(mylist3)
+print(mylist1)
+mylist2.extend(mylist3)
+
+============================================================================================================================
 Dictionary's
 
 Dictionary: Dictionary is key value pairs. 

@@ -1,0 +1,13 @@
+import os
+
+files = []
+for root, _, filenames in os.walk("."):
+    for file in filenames:
+        if "license" in file.lower() or "notice" in file.lower():
+            files.append(os.path.join(root, file))
+
+if files:
+    print("Found LICENSE/NOTICE files:")
+    print("\n".join(files))
+else:
+    print("No LICENSE/NOTICE files found.")

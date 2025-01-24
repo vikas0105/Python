@@ -1,0 +1,29 @@
+import os
+
+# Current working directory
+print("Current Working Directory:", os.getcwd())
+
+# List all files and folders in the current directory
+print("Directory Contents:", os.listdir("."))
+
+# Create a new directory
+os.makedirs("new_dir", exist_ok=True)
+print("Created directory 'new_dir'.")
+
+# Check if a path exists
+print("Does 'new_dir' exist?", os.path.exists("new_dir"))
+
+# Join paths in a platform-independent way
+joined_path = os.path.join("new_dir", "file.txt")
+print("Joined path:", joined_path)
+
+# Check if it's a file or directory
+print("Is 'new_dir' a directory?", os.path.isdir("new_dir"))
+print("Is 'file.txt' a file?", os.path.isfile("file.txt"))
+
+# Get the absolute path of a file
+print("Absolute path of 'new_dir':", os.path.abspath("new_dir"))
+
+# Remove a file or directory
+# os.rmdir("new_dir")  # Uncomment to remove the directory
+# print("'new_dir' removed.")

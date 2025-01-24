@@ -64,15 +64,14 @@ print(list(squares))  # Output: [1, 4, 9]
 
 File Handling
 open(): Read a file.
-
 with open("example.txt", "r") as file:
     print(file.read())
-write(): Write to a file.
 
+write(): Write to a file.
 with open("example.txt", "w") as file:
     file.write("Hello, world!")
-close(): Ensure a file is closed.
 
+close(): Ensure a file is closed.
 file = open("example.txt", "r")
 print(file.read())
 file.close()

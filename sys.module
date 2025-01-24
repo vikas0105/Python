@@ -1,0 +1,70 @@
+import sys
+
+# 1. Print Command-Line Arguments
+print("1. Command-Line Arguments:")
+print("Script Name:", sys.argv[0])  # The script name
+print("Arguments:", sys.argv[1:])  # Additional arguments passed
+print("-" * 50)
+
+# 2. Exit a Program
+print("2. Exit a Program:")
+try:
+    print("Exiting the program now...")
+    sys.exit(0)  # Exit with status code 0
+except SystemExit as e:
+    print("Exited with code:", e.code)
+print("-" * 50)
+
+# 3. Get Python Version
+print("3. Python Version:")
+print("Python Version:", sys.version)
+print("-" * 50)
+
+# 4. Get System Path
+print("4. System Path:")
+print("System Path:", sys.path)
+print("-" * 50)
+
+# 5. Standard Input, Output, and Error
+print("5. Standard Input, Output, and Error:")
+sys.stdout.write("This is standard output.\n")
+sys.stderr.write("This is an error message.\n")
+print("-" * 50)
+
+# 6. Maximum Recursion Depth
+print("6. Maximum Recursion Depth:")
+print("Default Recursion Limit:", sys.getrecursionlimit())
+sys.setrecursionlimit(2000)  # Change the recursion limit
+print("Updated Recursion Limit:", sys.getrecursionlimit())
+print("-" * 50)
+
+# 7. Get the Platform
+print("7. Platform:")
+print("Platform:", sys.platform)
+print("-" * 50)
+
+# 8. Check Byte Order
+print("8. Byte Order:")
+print("Byte Order:", sys.byteorder)
+print("-" * 50)
+
+# 9. Get Python Executable Path
+print("9. Python Executable Path:")
+print("Python Executable Path:", sys.executable)
+print("-" * 50)
+
+# 10. Check Module Size
+print("10. Check Module Size:")
+my_list = [1, 2, 3, 4]
+print("Size of my_list:", sys.getsizeof(my_list), "bytes")
+print("-" * 50)
+
+# 11. Detect Default Encoding
+print("11. Default Encoding:")
+print("Default Encoding:", sys.getdefaultencoding())
+print("-" * 50)
+
+# 12. Retrieve System Information
+print("12. Python Implementation:")
+print("Python Implementation:", sys.implementation)
+print("-" * 50)

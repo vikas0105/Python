@@ -1,0 +1,56 @@
+import os
+
+# ---------------- TEXT FILE MODES ---------------- #
+
+# 1. "w" - Write Mode (Overwrites if exists, creates if not)
+with open("sample.txt", "w") as file:
+    file.write("This is a new file.\n")
+    file.write("It will overwrite if it already exists.\n")
+print('"w" mode: File written successfully!')
+
+# 2. "r" - Read Mode (Fails if file does not exist)
+try:
+    with open("sample.txt", "r") as file:
+        content = file.read()
+    print('\n"r" mode: File content:')
+    print(content)
+except FileNotFoundError:
+    print('Error: File not found!')
+
+# 3. "a" - Append Mode (Creates if not exists, Adds to end)
+with open("sample.txt", "a") as file:
+    file.write("Appending a new line.\n")
+print('\n"a" mode: Data appended successfully!')
+
+# 4. "x" - Create Mode (Fails if file exists)
+try:
+    with open("newfile.txt", "x") as file:
+        file.write("This file is created using 'x' mode.\n")
+    print('\n"x" mode: File created successfully!')
+except FileExistsError:
+    print('\n"x" mode: File already exists!')
+
+# ---------------- BINARY FILE MODES ---------------- #
+
+# 5. "wb" - Write Binary Mode (For non-text files like images)
+binary_data = b'\x00\x01\x02\x03\x04'
+with open("binary_file.bin", "wb") as file:
+    file.write(binary_data)
+print('\n"wb" mode: Binary file written successfully!')
+
+# 6. "rb" - Read Binary Mode (Reads raw binary data)
+with open("binary_file.bin", "rb") as file:
+    binary_content = file.read()
+print('\n"rb" mode: Binary content read:', binary_content)
+
+# 7. "ab" - Append Binary Mode (Appends raw data)
+with open("binary_file.bin", "ab") as file:
+    file.write(b'\x05\x06')
+print('\n"ab" mode: Data appended to binary file!')
+
+# ---------------- CLEANUP ---------------- #
+# Deleting test files to keep the workspace clean
+os.remove("sample.txt")
+os.remove("binary_file.bin")
+os.remove("newfile.txt")
+print("\nCleanup: Test files deleted!")

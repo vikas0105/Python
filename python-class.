@@ -19,3 +19,36 @@ Make the car drive: car1.drive() makes the car "drive" and prints "The Toyota ca
 Simple Breakdown:
 Class: A blueprint for a car.
 Object: A specific car, like the "Toyota."
+==============================================================================================================================================================================
+==============================================================================================================================================================================
+
+class Person:
+    def __init__(self, name):
+        self.name = name  # Store person's name
+
+    def say_hello(self):
+        return f"Hello, my name is {self.name}"
+
+# Create a person object
+person1 = Person("John")
+
+# Call the say_hello method
+print(person1.say_hello())  # Output: Hello, my name is John
+
+==============================================================================================================================================================================
+==============================================================================================================================================================================
+
+class Book:
+    def __init__(self, title, author):
+        self.title = title  # Store the book's title
+        self.author = author  # Store the author's name
+
+    def get_info(self):
+        return f"'{self.title}' by {self.author}"
+
+# Create a book object
+book1 = Book("1984", "George Orwell")
+
+# Call the get_info method
+print(book1.get_info())  # Output: '1984' by George Orwell
+==============================================================================================================================================================================

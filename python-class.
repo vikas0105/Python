@@ -1,0 +1,21 @@
+class Car:
+    def __init__(self, brand):
+        self.brand = brand  # Store the car's brand
+
+    def drive(self):
+        return f"The {self.brand} car is driving!"
+
+# Create a car object
+car1 = Car("Toyota")  # The car's brand is "Toyota"
+
+# Make the car drive
+print(car1.drive())  # Output: The Toyota car is driving!
+
+Class Car: This is a blueprint for a car. The car has a brand and can drive.
+Constructor (__init__): This is where we give the car a brand when we create it.
+Method (drive): This is the action that the car can perform—driving!
+Create a car: car1 = Car("Toyota") creates a car with the brand Toyota.
+Make the car drive: car1.drive() makes the car "drive" and prints "The Toyota car is driving!".
+Simple Breakdown:
+Class: A blueprint for a car.
+Object: A specific car, like the "Toyota."

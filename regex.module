@@ -90,3 +90,28 @@ if re.match(pattern, email):
 else:
     print(f"{email} is not a valid email address.")
 print("-" * 50)
+
+
+import re
+
+# Sample string
+string = "abc123def456ghi789"
+
+# Define pattern (matching one or more digits)
+pattern = r'\d+'
+
+# Using re.match() - Only searches at the start of the string
+match_result = re.match(pattern, string)
+print("re.match():", match_result.group() if match_result else "No match")
+
+# Using re.search() - Finds the first occurrence in the string
+search_result = re.search(pattern, string)
+print("re.search():", search_result.group() if search_result else "No match")
+
+# Using re.findall() - Finds all occurrences in the string
+findall_result = re.findall(pattern, string)
+print("re.findall():", findall_result)
+
+# Using re.sub() - Replaces all occurrences of the pattern
+sub_result = re.sub(pattern, "X", string)
+print("re.sub():", sub_result)

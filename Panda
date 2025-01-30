@@ -1,0 +1,46 @@
+Pandas is a Python library used for data manipulation, analysis, and cleaning. It provides powerful data structures like:
+
+DataFrame (like an Excel table)
+Series (like a column of data)
+Pandas makes working with structured data (tables, CSVs, Excel, databases, etc.) easier and faster!
+
+
+import pandas as pd
+
+# 1️⃣ Create a DataFrame
+data = {
+    'Name': ['Alice', 'Bob', 'Charlie', 'David'],
+    'Age': [25, 30, 35, 28],
+    'City': ['New York', 'Los Angeles', 'Chicago', 'Houston'],
+    'Salary': [50000, 60000, 70000, 55000]
+}
+
+df = pd.DataFrame(data)
+print("\n✅ Original DataFrame:\n", df)
+
+# 2️⃣ Read & Write CSV (Uncomment if needed)
+# df.to_csv("output.csv", index=False)
+# df = pd.read_csv("output.csv")
+
+# 3️⃣ Select a specific column
+print("\n✅ Names Column:\n", df['Name'])
+
+# 4️⃣ Filter rows (People older than 28)
+df_filtered = df[df['Age'] > 28]
+print("\n✅ Filtered Data (Age > 28):\n", df_filtered)
+
+# 5️⃣ Add a new column
+df['Bonus'] = df['Salary'] * 0.10  # 10% of salary
+print("\n✅ DataFrame After Adding Bonus:\n", df)
+
+# 6️⃣ Sort by Age
+df_sorted = df.sort_values(by='Age')
+print("\n✅ Sorted by Age:\n", df_sorted)
+
+# 7️⃣ Group by City and get average Salary
+df_grouped = df.groupby('City')['Salary'].mean()
+print("\n✅ Average Salary by City:\n", df_grouped)
+
+# 8️⃣ Save the final DataFrame to CSV
+df.to_csv("final_output.csv", index=False)
+print("\n✅ DataFrame saved to 'final_output.csv'")

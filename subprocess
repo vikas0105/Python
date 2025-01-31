@@ -1,0 +1,42 @@
+import subprocess
+
+# 1. Basic command execution
+print("1. Running 'ls -l' command:")
+result = subprocess.run(["ls", "-l"], capture_output=True, text=True)
+print(result.stdout)  # Prints directory listing
+
+# 2. Capturing command output
+print("\n2. Capturing command output:")
+output = subprocess.run(["echo", "Hello, World!"], capture_output=True, text=True)
+print(output.stdout)  # Output: Hello, World!
+
+# 3. Using check_output() to get command output directly
+print("\n3. Using check_output():")
+output = subprocess.check_output(["ls", "-l"], text=True)
+print(output)  # Prints the output of 'ls -l'
+
+# 4. Handling errors using `check=True`
+print("\n4. Handling errors:")
+try:
+    subprocess.run(["ls", "non_existing_dir"], check=True)
+except subprocess.CalledProcessError as e:
+    print("Error:", e)  # Handles error if the command fails
+
+# 5. Running a command through the shell (caution advised)
+print("\n5. Running command through the shell:")
+subprocess.run("echo Hello from shell", shell=True)
+
+# 6. Interacting with a process using Popen
+print("\n6. Interacting with a process:")
+process = subprocess.Popen(["cat"], stdin=subprocess.PIPE, stdout=subprocess.PIPE, text=True)
+process.stdin.write("Hello from Python subprocess\n")
+process.stdin.close()
+print(process.stdout.read())  # Output: Hello from Python subprocess
+
+# 7. Redirecting output to a file
+print("\n7. Redirecting output to a file:")
+with open("output.txt", "w") as f:
+    subprocess.run(["ls", "-l"], stdout=f)
+print("Output written to 'output.txt'")
+
+print("\nAll subprocess examples executed successfully!")

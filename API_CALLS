@@ -1,0 +1,95 @@
+import requests
+import httpx
+import asyncio
+
+# ------------------ 1️⃣ Basic GET Request ------------------
+def get_request():
+    url = "https://api.github.com"
+    response = requests.get(url)
+    print(f"✅ GET Response: {response.json()}")
+
+# ------------------ 2️⃣ Basic POST Request ------------------
+def post_request():
+    url = "https://jsonplaceholder.typicode.com/posts"
+    data = {"title": "DevOps API", "body": "This is a test post.", "userId": 1}
+    
+    response = requests.post(url, json=data)
+    print(f"✅ POST Response: {response.json()}")
+
+# ------------------ 3️⃣ Async GET Request ------------------
+async def async_get():
+    async with httpx.AsyncClient() as client:
+        response = await client.get("https://api.github.com")
+        print(f"✅ Async GET Response: {response.json()}")
+
+# ------------------ 4️⃣ Trigger a Jenkins Job ------------------
+def trigger_jenkins():
+    jenkins_url = "http://jenkins.example.com/job/{job_name}/build"
+    headers = {"Authorization": "Bearer YOUR_JENKINS_TOKEN"}
+
+    response = requests.post(jenkins_url, headers=headers)
+    if response.status_code == 201:
+        print("✅ Jenkins Job Triggered!")
+    else:
+        print(f"❌ Jenkins API Error: {response.status_code}")
+
+# ------------------ EXECUTE ALL FUNCTIONS ------------------
+if __name__ == "__main__":
+    get_request()
+    post_request()
+    asyncio.run(async_get())
+    trigger_jenkins()
+
+
+Here’s a simple and clean all-in-one Python snippet covering GET, POST, async API calls, and triggering Jenkins. 🚀
+
+🔥 DevOps API Interaction Script (One Snippet)
+python
+Copy
+Edit
+import requests
+import httpx
+import asyncio
+
+# ------------------ 1️⃣ Basic GET Request ------------------
+def get_request():
+    url = "https://api.github.com"
+    response = requests.get(url)
+    print(f"✅ GET Response: {response.json()}")
+
+# ------------------ 2️⃣ Basic POST Request ------------------
+def post_request():
+    url = "https://jsonplaceholder.typicode.com/posts"
+    data = {"title": "DevOps API", "body": "This is a test post.", "userId": 1}
+    
+    response = requests.post(url, json=data)
+    print(f"✅ POST Response: {response.json()}")
+
+# ------------------ 3️⃣ Async GET Request ------------------
+async def async_get():
+    async with httpx.AsyncClient() as client:
+        response = await client.get("https://api.github.com")
+        print(f"✅ Async GET Response: {response.json()}")
+
+# ------------------ 4️⃣ Trigger a Jenkins Job ------------------
+def trigger_jenkins():
+    jenkins_url = "http://jenkins.example.com/job/{job_name}/build"
+    headers = {"Authorization": "Bearer YOUR_JENKINS_TOKEN"}
+
+    response = requests.post(jenkins_url, headers=headers)
+    if response.status_code == 201:
+        print("✅ Jenkins Job Triggered!")
+    else:
+        print(f"❌ Jenkins API Error: {response.status_code}")
+
+# ------------------ EXECUTE ALL FUNCTIONS ------------------
+if __name__ == "__main__":
+    get_request()
+    post_request()
+    asyncio.run(async_get())
+    trigger_jenkins()
+📌 What This Covers:
+✅ GET API Request → Fetches data from GitHub
+✅ POST API Request → Creates a test post
+✅ Async GET Request → Fetches API data asynchronously
+✅ Trigger Jenkins Job → Starts a Jenkins build
